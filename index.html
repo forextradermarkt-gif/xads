@@ -1,314 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Khatri555 Mobile</title>
-    
-    <!-- Meta Pixel Code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gujarati trader™ - Educational Community</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Twitter (X) Pixel Tag Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script');
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
     
-    fbq('init', '2225081671661215');
-    fbq('track', 'PageView');
+    // Yahan apni Twitter Pixel ID dalein (e.g., 'o1234')
+    twq('config','YOUR_TWITTER_PIXEL_ID');
+    twq('event', 'PageView');
     </script>
-    
-    <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2225081671661215&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- End Twitter (X) Pixel Tag Code -->
 
-    <!-- Mobile Status Bar Color -->
-    <meta name="theme-color" content="#008080">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: #f7f9fc;
-            color: #333;
-            padding-bottom: 30px;
-        }
-
-        /* Top Curved Banner */
-        .header {
-            background-color: #008080;
-            color: white;
-            padding: 25px 20px 60px 20px;
-            border-bottom-left-radius: 50% 25px;
-            border-bottom-right-radius: 50% 25px;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Container for Mobile view */
-        .container {
+        .page-container {
             width: 100%;
-            max-width: 480px;
-            margin: -35px auto 0 auto;
-            padding: 0 16px;
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: #121212;
+            border: 2px solid #bba15c;
+            border-radius: 30px;
+            padding: 30px 20px;
             text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            font-family: sans-serif;
         }
 
-        /* Welcome Badge */
-        .welcome-badge {
-            background-color: #e0f4f4;
-            color: #008080;
-            display: inline-block;
-            padding: 6px 18px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        /* Title Styling */
-        .main-title {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1.35;
-            color: #111;
-            margin-bottom: 20px;
-        }
-
-        /* Mobile Action Buttons (Call / WhatsApp) */
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            flex: 1;
-            max-width: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 0;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .btn-call {
-            border: 1px solid #333;
-            color: #333;
-            background: white;
-        }
-
-        .btn-whatsapp {
-            background-color: #00a859;
-            color: white;
-            border: none;
-        }
-
-        /* Contact Numbers */
-        .phone-info {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        
-        .phone-info p {
-            margin-bottom: 4px;
-            font-weight: 500;
-        }
-
-        .phone-number {
-            font-size: 16px;
-            font-weight: 600;
-            color: #111;
-        }
-
-        /* Big Download Button */
-        .btn-download {
-            background-color: #008080;
-            color: white;
+        .telegram-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 280px;
-            padding: 14px 0;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 128, 128, 0.25);
-            margin-bottom: 35px;
-        }
-
-        /* Section Headings */
-        .section-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 2px;
-        }
-
-        .section-title span {
-            color: #0066ff;
-        }
-
-        .section-subtitle {
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 20px;
-        }
-
-        /* Mobile Rates List */
-        .rates-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
-
-        .rate-card {
-            background: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 16px;
-            border-radius: 6px;
-            border-left: 4px solid #008080;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-        }
-
-        .rate-name {
-            font-size: 13px;
-            font-weight: 500;
-            color: #333;
-            display: flex;
-            align-items: center;
             gap: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #0088cc;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+            animation: pulseGlow 1.8s infinite alternate ease-in-out;
         }
 
-        .rate-name i {
-            color: #888;
-            font-size: 13px;
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 198, 255, 0.5); }
+            100% { transform: scale(1.04); box-shadow: 0 0 25px rgba(0, 198, 255, 0.8); }
         }
 
-        .rate-value {
-            font-size: 13px;
-            font-weight: 700;
-            color: #00a896;
+        /* Disclaimer & Compliance Styling for Twitter Ads */
+        .disclaimer-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+            font-size: 11px;
+            color: #888888;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .policy-links {
+            margin-top: 10px;
+        }
+
+        .policy-links a {
+            color: #bba15c;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 11px;
+        }
+
+        .policy-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">
-            <i class="fa-solid fa-circle-dot"></i> Khatri555
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <div class="container">
+    <div class="page-container">
         
-        <!-- Welcome Badge -->
-        <div class="welcome-badge">Welcome to Khatri555</div>
-
-        <!-- Headings -->
-        <h1 class="main-title">
-            Play Big, Win Big<br>
-            Business Of Faith<br>
-            With Confidence
-        </h1>
-
-        <!-- Call & WhatsApp Buttons -->
-        <div class="contact-buttons">
-            <a href="tel:+91639851748891" class="btn btn-call">
-                <i class="fa-solid fa-phone"></i> Call Now
-            </a>
-            <a href="https://wa.me/639851748891?text=Welcome%20To%20India%27s%20Trusted%20Khatri555%20Matka%20Application" class="btn btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="WhatsApp Image 2026-07-08 at 1.09.06 AM.jpeg" alt="Logo" style="width: 120px; height: 120px; border-radius: 50%;">
+            </div>
         </div>
 
-        <!-- Phone Info -->
-        <div class="phone-info">
-            <p>Connect With phone call</p>
-            <div class="phone-number">+91 639851748891</div>
-            <div class="phone-number">+91 639851748891</div>
+        <div class="title-section">
+            <span class="crown">👑</span>
+            <h1 style="display:inline-block; margin: 10px 0;">gujarati trader™</h1>
+            <span class="crown">👑</span>
         </div>
 
-        <!-- Download Button -->
-        <a href="https://khatri555.org/apk/Khatri%20555.apk" class="btn-download" download>
-            <i class="fa-solid fa-download"></i> Download Now
+        <p class="subtitle">✓ Verified Educational Community</p>
+
+        <div class="members-badge">
+            👥 Active Learners: <span id="memberCount" style="color: #00c853; font-weight: bold;">100,212</span>
+        </div>
+
+        <a href="https://telegram.me/+Urlvti0tpCsxNTA9" class="telegram-btn" target="_blank" onclick="twq('event', 'Contact');">
+            🚀 Join Educational Telegram +
         </a>
 
-        <!-- Game Rates Section -->
-        <h2 class="section-title">Game <span>Rates</span></h2>
-        <p class="section-subtitle">We have Best Game Rates for you</p>
-
-        <div class="rates-list">
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Single Digit</div>
-                <div class="rate-value">1 RS KA 10 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Jodi Digit</div>
-                <div class="rate-value">1 RS KA 100 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Single Pana</div>
-                <div class="rate-value">1 RS KA 100 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Dubble Pana</div>
-                <div class="rate-value">1 RS KA 150 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Triple Pana</div>
-                <div class="rate-value">1 RS KA 300 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Half Sangam</div>
-                <div class="rate-value">1 RS KA 700 Rs</div>
-            </div>
-            <div class="rate-card">
-                <div class="rate-name"><i class="fa-regular fa-thumbs-up"></i> Full Sangam</div>
-                <div class="rate-value">1 RS KA 1000 Rs</div>
-            </div>
+        <div class="features-list" style="text-align: left; max-width: 280px; margin: 0 auto; line-height: 2;">
+            <div class="feature-item"><span style="color: #00c853;">✓</span> Free Stock Market Education</div>
+            <div class="feature-item"><span style="color: #00c853;">✓</span> Live Market Insights & Discussion</div>
+            <div class="feature-item"><span style="color: #00c853;">✓</span> Risk Management & Practical Strategies</div>
         </div>
 
-        <!-- Available Games Heading -->
-        <h2 class="section-title">Available <span>Games</span></h2>
-        <p class="section-subtitle">We have multiple types of games for you</p>
+        <!-- Twitter Compliance Footer -->
+        <div class="disclaimer-section">
+            <p><strong>Educational Disclaimer:</strong> This channel is strictly for educational and informational purposes only. We do not provide financial advice, stock tips, or guaranteed returns. Trading in financial markets carries substantial risk of loss.</p>
+            
+            <div class="policy-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms & Conditions</a> | 
+                <a href="#">Contact Us</a>
+            </div>
+            <p style="margin-top: 8px; font-size: 10px;">© 2026 gujarati trader™. All Rights Reserved.</p>
+        </div>
 
     </div>
 
