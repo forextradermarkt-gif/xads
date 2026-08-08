@@ -1,132 +1,287 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gujarati trader™ - Educational Community</title>
+
+    <title>Gujarati Trader™ - Educational Trading Community</title>
+    <meta name="description" content="Gujarati Trader is an educational community providing market education, analysis, discussion and risk management resources.">
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- Twitter (X) Pixel Tag Code -->
+    <!-- X (Twitter) Pixel -->
     <script>
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    
-    // Yahan apni Twitter Pixel ID dalein (e.g., 'o1234')
+    !function(e,t,n,s,u,a){
+        e.twq||(s=e.twq=function(){
+            s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,
+        u.src='https://static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],
+        a.parentNode.insertBefore(u,a))
+    }(window,document,'script');
+
     twq('config','YOUR_TWITTER_PIXEL_ID');
     twq('event', 'PageView');
     </script>
-    <!-- End Twitter (X) Pixel Tag Code -->
+    <!-- End X Pixel -->
+
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #080b14;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
         .page-container {
             width: 100%;
             max-width: 450px;
             margin: 0 auto;
-            background-color: #121212;
+            background: #121622;
             border: 2px solid #bba15c;
             border-radius: 30px;
             padding: 30px 20px;
             text-align: center;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-            color: #ffffff;
-            font-family: sans-serif;
+            box-shadow: 0 10px 30px rgba(0,0,0,.5);
+        }
+
+        .logo-circle img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .title-section h1 {
+            font-size: 27px;
+            color: #f5c542;
+        }
+
+        .crown {
+            font-size: 22px;
+        }
+
+        .subtitle {
+            color: #d7d7d7;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .members-badge {
+            margin: 20px auto;
+            padding: 13px;
+            max-width: 290px;
+            border: 1px solid #444b63;
+            border-radius: 15px;
+            background: #181e2e;
+            color: #eeeeee;
+            font-size: 14px;
         }
 
         .telegram-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
             text-decoration: none;
             font-weight: bold;
-            background-color: #0088cc;
+            background: #0088cc;
             color: #ffffff;
-            padding: 14px 28px;
+            padding: 14px 25px;
             border-radius: 50px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
-            animation: pulseGlow 1.8s infinite alternate ease-in-out;
+            margin: 15px 0 25px;
+            box-shadow: 0 0 18px rgba(0,136,204,.5);
+            transition: .3s;
         }
 
-        @keyframes pulseGlow {
-            0% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 198, 255, 0.5); }
-            100% { transform: scale(1.04); box-shadow: 0 0 25px rgba(0, 198, 255, 0.8); }
+        .telegram-btn:hover {
+            transform: scale(1.03);
         }
 
-        /* Disclaimer & Compliance Styling for Twitter Ads */
+        .features-list {
+            text-align: left;
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .feature-item {
+            background: #181e2e;
+            border: 1px solid #3b435c;
+            border-radius: 14px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .check {
+            color: #00c853;
+            font-weight: bold;
+        }
+
         .disclaimer-section {
             margin-top: 25px;
-            padding-top: 15px;
-            border-top: 1px solid #333;
+            padding-top: 18px;
+            border-top: 1px solid #333b50;
             font-size: 11px;
-            color: #888888;
-            line-height: 1.4;
-            text-align: center;
+            color: #999999;
+            line-height: 1.55;
         }
 
         .policy-links {
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .policy-links a {
-            color: #bba15c;
+            color: #d4b55c;
             text-decoration: none;
-            margin: 0 8px;
+            margin: 0 5px;
             font-size: 11px;
         }
 
         .policy-links a:hover {
             text-decoration: underline;
         }
+
+        .copyright {
+            margin-top: 12px;
+            font-size: 10px;
+            color: #777777;
+        }
+
     </style>
 </head>
+
+
 <body>
 
-    <div class="page-container">
-        
-        <div class="logo-section">
-            <div class="logo-circle">
-                <img src="WhatsApp Image 2026-07-21 at 8.17.06 PM.jpeg" alt="Logo" style="width: 120px; height: 120px; border-radius: 50%;">
-            </div>
+<div class="page-container">
+
+    <!-- Logo -->
+    <div class="logo-circle">
+        <img 
+            src="WhatsApp Image 2026-07-21 at 8.17.06 PM.jpeg"
+            alt="Gujarati Trader Educational Community Logo">
+    </div>
+
+
+    <!-- Title -->
+    <div class="title-section">
+        <span class="crown">👑</span>
+
+        <h1 style="display:inline-block; margin:10px 0;">
+            gujarati trader™️
+        </h1>
+
+        <span class="crown">👑</span>
+    </div>
+
+
+    <!-- Subtitle -->
+    <p class="subtitle">
+        ✓ Educational Trading Community
+    </p>
+
+
+    <!-- Community -->
+    <div class="members-badge">
+        👥 Join Our Educational Community
+    </div>
+
+
+    <!-- Telegram -->
+    <a
+        href="https://telegram.me/+Urlvti0tpCsxNTA9"
+        class="telegram-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="twq('event', 'Contact');">
+
+        🚀 Join Free Educational Telegram
+
+    </a>
+
+
+    <!-- Features -->
+    <div class="features-list">
+
+        <div class="feature-item">
+            <span class="check">✓</span>
+            Free Stock Market Education
         </div>
 
-        <div class="title-section">
-            <span class="crown">👑</span>
-            <h1 style="display:inline-block; margin: 10px 0;">gujarati trader™</h1>
-            <span class="crown">👑</span>
+        <div class="feature-item">
+            <span class="check">✓</span>
+            Market Insights & Discussion
         </div>
 
-        <p class="subtitle">✓ Verified Educational Community</p>
-
-        <div class="members-badge">
-            👥 Active Learners: <span id="memberCount" style="color: #00c853; font-weight: bold;">100,212</span>
-        </div>
-
-        <a href="https://telegram.me/+Urlvti0tpCsxNTA9" class="telegram-btn" target="_blank" onclick="twq('event', 'Contact');">
-            🚀 Join Educational Telegram +
-        </a>
-
-        <div class="features-list" style="text-align: left; max-width: 280px; margin: 0 auto; line-height: 2;">
-            <div class="feature-item"><span style="color: #00c853;">✓</span> Free Stock Market Education</div>
-            <div class="feature-item"><span style="color: #00c853;">✓</span> Live Market Insights & Discussion</div>
-            <div class="feature-item"><span style="color: #00c853;">✓</span> Risk Management & Practical Strategies</div>
-        </div>
-
-        <!-- Twitter Compliance Footer -->
-        <div class="disclaimer-section">
-            <p><strong>Educational Disclaimer:</strong> This channel is strictly for educational and informational purposes only. We do not provide financial advice, stock tips, or guaranteed returns. Trading in financial markets carries substantial risk of loss.</p>
-            
-            <div class="policy-links">
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Terms & Conditions</a> | 
-                <a href="#">Contact Us</a>
-            </div>
-            <p style="margin-top: 8px; font-size: 10px;">© 2026 gujarati trader™. All Rights Reserved.</p>
+        <div class="feature-item">
+            <span class="check">✓</span>
+            Risk Management & Practical Strategies
         </div>
 
     </div>
+
+
+    <!-- Disclaimer -->
+    <div class="disclaimer-section">
+
+        <p>
+            <strong>Risk & Educational Disclaimer:</strong>
+            This website and Telegram community provide educational
+            and informational content only. We do not provide
+            personalized financial advice, guaranteed returns,
+            guaranteed profits, or risk-free trading strategies.
+            Trading and investing in financial markets involve
+            substantial risk of loss. Past performance does not
+            guarantee future results.
+        </p>
+
+
+        <!-- IMPORTANT:
+             Replace these # links with actual pages
+        -->
+
+        <div class="policy-links">
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            |
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+            |
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            |
+
+            <a href="risk-disclosure.html">
+                Risk Disclosure
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Gujarati Trader™. All Rights Reserved.
+        </p>
+
+    </div>
+
+</div>
 
 </body>
 </html>
